@@ -5,7 +5,9 @@
   </div>
 
   <div class="header__menu-button">
-    <!-- Place button here. -->
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 </div>
 

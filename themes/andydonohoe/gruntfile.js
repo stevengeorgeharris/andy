@@ -1,12 +1,10 @@
 module.exports = function(grunt) {
-
   grunt.initConfig({
-      // Register sass compiler.
+      // Lets register a sass compiler.
       sass: {
         dist: {
           options: {
             // Add your own options here. See https://github.com/gruntjs/grunt-contrib-sass.
-            style: 'expanded',
             sourcemap: 'none',
           },
           // Format = destination : source (You can add multiple files, seperate with a comma).
@@ -15,32 +13,32 @@ module.exports = function(grunt) {
           }
         }
       },
-      // Register watch task.
+      // Lets watch for file changes.
       watch: {
         // Watches all files ending .scss in sass/.
         files: ['sass/**/*.scss'],
         // If any target file changes, run these tasks.
         tasks: ['sass', 'postcss'],
       },
+      // Lets auto generate browser prefixes.
       postcss: {
-            options: {
-                map: true,
-                processors: [
-                    require('autoprefixer')({
-                        browsers: ['last 2 versions']
-                    })
-                ]
-            },
-            dist: {
-                src: 'style.css'
-            }
+        options: {
+          map: false,
+          processors: [
+            require('autoprefixer')({browsers: 'last 2 versions'}),
+          ]
         },
+        dist: {
+          src: 'style.css'
+        }
+    },
   });
 
-  // Load any plugins used.
+  // Lets load our dependancies.
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-postcss');
 
-  // Register your tasks. You can also call each task directly i.e. grunt watch/grunt sass.
+  // Lets register our task.
   grunt.registerTask('default', ['watch']);
 };

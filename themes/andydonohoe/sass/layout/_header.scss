@@ -1,0 +1,49 @@
+.header {
+  padding: $spacing * 2;
+  @extend %clearfix;
+}
+
+.header__brand {
+  font-size: em(24);
+  width: 50%;
+  float: left;
+}
+
+.brand-main {
+  font-family: $font-medium;
+}
+
+.brand-sub {
+  font-family: $font-light;
+}
+
+.header__menu-button {
+  float: right;
+  margin-top: 6px;
+
+  &:hover {
+    cursor: pointer;
+    span {
+      &:first-child {
+        transform: translateY(-2px);
+      }
+      &:last-child {
+        transform: translateY(2px);
+      }
+    }
+  }
+
+  span {
+    height: 2px;
+    width: 30px;
+    background: #000000;
+    display: block;
+    transition: all 0.15s cubic-bezier(0.63, 0.62, 0.48, 1.64) 0.1s;
+    &:first-child {
+      margin-bottom: 5px;
+    }
+    &:last-child {
+      margin-top: 5px;
+    }
+  }
+}

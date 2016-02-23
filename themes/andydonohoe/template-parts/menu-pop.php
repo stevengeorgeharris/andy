@@ -5,4 +5,8 @@
     <li>Editorial</li>
     <li>Travel</li>
   </ul>
+  <ul class="menu-pop__links menu-pop__links--bottom">
+    <li>Blog</li>
+    <li>Contact</li>
+  </ul>
 </div>

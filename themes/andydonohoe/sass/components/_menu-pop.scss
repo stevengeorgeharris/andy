@@ -18,4 +18,14 @@
   list-style: none;
   color: #ffffff;
   font-size: em(36);
+
+  li {
+    margin-bottom: em(4);
+  }
+
+  &--bottom {
+    position: absolute;
+    bottom: $spacing * 2;
+    margin-bottom: 0;
+  }
 }

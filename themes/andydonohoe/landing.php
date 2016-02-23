@@ -9,7 +9,7 @@
 ?>
 
 <!-- Above fold on page entry -->
-<div class="welcome"></div>
+<?php get_template_part('template-parts/welcome'); ?>
 
 <!-- Below fold -->
 <div class="portfolio"></div>

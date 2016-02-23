@@ -18,3 +18,4 @@
 <body>
 
 <?php get_template_part('template-parts/brand', 'menu'); ?>
+<?php get_template_part('template-parts/menu', 'pop'); ?>

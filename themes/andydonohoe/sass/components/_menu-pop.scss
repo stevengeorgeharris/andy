@@ -1,0 +1,21 @@
+.menu-pop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background-color: $color-primary;
+  transition: all 200ms ease-in-out;
+
+  &--hidden {
+    top: -100%;
+  }
+}
+
+.menu-pop__links {
+  list-style: none;
+  color: #ffffff;
+  font-size: em(36);
+}

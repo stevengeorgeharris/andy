@@ -367,6 +367,27 @@ th {
   display: table;
   clear: both; }
 
+body {
+  font-family: "calibre-light", sans-serif; }
+
+.menu-pop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background-color: #58585a;
+  transition: all 200ms ease-in-out; }
+  .menu-pop--hidden {
+    top: -100%; }
+
+.menu-pop__links {
+  list-style: none;
+  color: #ffffff;
+  font-size: 2.25em; }
+
 .header {
   padding: 40px; }
 
@@ -382,23 +403,35 @@ th {
   font-family: "calibre-light", sans-serif; }
 
 .header__menu-button {
-  float: right;
-  margin-top: 6px; }
+  position: absolute;
+  right: 40px;
+  top: 46px;
+  z-index: 4; }
   .header__menu-button:hover {
     cursor: pointer; }
-    .header__menu-button:hover span:first-child {
-      -webkit-transform: translateY(-2px);
-              transform: translateY(-2px); }
-    .header__menu-button:hover span:last-child {
-      -webkit-transform: translateY(2px);
-              transform: translateY(2px); }
+  .header__menu-button--pop:hover .bar-1 {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px); }
+  .header__menu-button--pop:hover .bar-3 {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px); }
+  .header__menu-button--close .bar-1 {
+    -webkit-transform: rotateZ(45deg) translateX(4px) translateY(5px);
+            transform: rotateZ(45deg) translateX(4px) translateY(5px);
+    background: #ffffff; }
+  .header__menu-button--close .bar-2 {
+    opacity: 0; }
+  .header__menu-button--close .bar-3 {
+    -webkit-transform: rotateZ(-45deg) translateX(5px) translateY(-6px);
+            transform: rotateZ(-45deg) translateX(5px) translateY(-6px);
+    background: #ffffff; }
   .header__menu-button span {
     height: 2px;
     width: 30px;
     background: #000000;
     display: block;
     transition: all 0.15s cubic-bezier(0.63, 0.62, 0.48, 1.64) 0.1s; }
-    .header__menu-button span:first-child {
+    .header__menu-button span.bar-1 {
       margin-bottom: 5px; }
-    .header__menu-button span:last-child {
+    .header__menu-button span.bar-3 {
       margin-top: 5px; }

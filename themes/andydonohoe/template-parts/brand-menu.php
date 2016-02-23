@@ -4,13 +4,9 @@
     <span class="brand-sub">Photographer</span>
   </div>
 
-  <div class="header__menu-button">
-    <span></span>
-    <span></span>
-    <span></span>
+  <div class="header__menu-button header__menu-button--pop">
+    <span class="bar-1"></span>
+    <span class="bar-2"></span>
+    <span class="bar-3"></span>
   </div>
-</div>
-
-<div class="menu menu--hidden">
-  <!-- Pop out menu -->
 </div>

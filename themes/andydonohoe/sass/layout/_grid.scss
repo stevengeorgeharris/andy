@@ -1,0 +1,24 @@
+.portfolio {
+  padding: 0 em(20);
+  opacity: 0;
+  transform: translate3d(0, 50%, 0);
+
+  &--loaded {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    animation: projects-load 1s ease-in-out;
+  }
+}
+
+.projects__measure,
+.projects__card {
+  width: 33.33333%;
+  
+  @media screen and (max-width: $tablet) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: $mobile) {
+    width: 100%;
+  }
+}

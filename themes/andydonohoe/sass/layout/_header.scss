@@ -1,6 +1,8 @@
 .header {
-  padding: $spacing * 2;
   @extend %clearfix;
+  position: relative;
+  padding: $spacing * 2;
+  z-index: 3;
 }
 
 .header__brand {
@@ -20,8 +22,7 @@
 .header__menu-button {
   position: absolute;
   right: $spacing * 2;
-  top: ($spacing * 2) + 6;
-  z-index: 4;
+  padding-top: 6;
 
   &:hover {
     cursor: pointer;
@@ -41,14 +42,12 @@
   &--close {
     .bar-1 {
       transform: rotateZ(45deg) translateX(4px) translateY(5px);
-      background: #ffffff;
     }
     .bar-2 {
       opacity: 0;
     }
     .bar-3 {
       transform: rotateZ(-45deg) translateX(5px) translateY(-6px);
-      background: #ffffff;
     }
   }
 

@@ -1,0 +1,36 @@
+@keyframes menu-hide {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  99% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes menu-show {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes projects-load {
+  0% {
+    transform: translate3d(0, 50%, 0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}

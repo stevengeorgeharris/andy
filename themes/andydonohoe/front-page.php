@@ -12,7 +12,9 @@
 <?php get_template_part('template-parts/welcome'); ?>
 
 <!-- Below fold -->
-<div class="portfolio"></div>
+<div class="portfolio">
+  <?php get_template_part('template-parts/projects'); ?>
+</div>
 
 <?php
   get_footer();

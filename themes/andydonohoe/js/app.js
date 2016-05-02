@@ -61,10 +61,27 @@ andy.grid = {
   }
 };
 
+andy.slider = {
+  init: function() {
+    this.attach();
+  },
+  attach: function() {
+    var $target = $('.project-slider');
+
+    if ($target.length > 0) {
+      $target.slick({
+        nextArrow: $('.project-slider__next'),
+        prevArrow: $('.project-slider__prev')
+      });
+    }
+  }
+};
+
 andy.initialise = function() {
   andy.menuPop.init();
   andy.welcome.init();
   andy.grid.init();
+  andy.slider.init();
 };
 
 window.onload = andy.initialise;

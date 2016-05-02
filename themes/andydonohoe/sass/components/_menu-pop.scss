@@ -23,6 +23,10 @@
 .menu-pop__content {
   padding: em(110) em(40) em(50) em(40);
 
+  @media screen and (max-width: $mobile) {
+    padding: em(110) em(20) em(20) em(20);
+  }
+
   p {
     font-size: 1.5em;
   }

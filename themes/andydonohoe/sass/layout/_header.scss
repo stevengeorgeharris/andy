@@ -3,6 +3,10 @@
   position: relative;
   padding: $spacing * 2;
   z-index: 3;
+
+  @media screen and (max-width: $mobile) {
+    padding: $spacing;
+  }
 }
 
 .header__brand {
@@ -22,7 +26,11 @@
 .header__menu-button {
   position: absolute;
   right: $spacing * 2;
-  padding-top: 6;
+  padding-top: 9px;
+
+  @media screen and (max-width: $mobile) {
+    right: 20px;
+  }
 
   &:hover {
     cursor: pointer;

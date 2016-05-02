@@ -22,36 +22,59 @@
   height: 100%;
   position: relative;
 
-  .welcome-branding__container {
-    width: 550px;
-    height: 42px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-  }
   &__main {
     font-family: $font-medium;
-    transform: translateX(50%);
-    position: absolute;
+    position: relative;
     display: block;
-    transition: all 500ms ease;
-    background-color: $color-secondary;
-    z-index: 1;
-    &--animate {
-      transform: translateX(0);
-    }
   }
   &__sub {
     font-family: $font-light;
-    position: absolute;
+    position: relative;
     display: block;
-    transform: translateX(100%);
-    transition: all 500ms ease;
-    opacity: 0;
-    &--animate {
-      transform: translateX(117%);
-      opacity: 1;
+  }
+
+  @media screen and (max-width: $mobile) {
+    font-size: em(24);
+
+    .welcome-branding__container {
+      top: 50%;
+      transform: translate3d(0, -50%, 0);
+      position: relative;
+    }
+  }
+
+  @media screen and (min-width: $mobile + 1) {
+    .welcome-branding__container {
+      width: 550px;
+      height: 42px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+    }
+    &__main {
+      font-family: $font-medium;
+      transform: translateX(50%);
+      position: absolute;
+      display: block;
+      transition: all 500ms ease;
+      background-color: $color-secondary;
+      z-index: 1;
+      &--animate {
+        transform: translateX(0);
+      }
+    }
+    &__sub {
+      font-family: $font-light;
+      position: absolute;
+      display: block;
+      transform: translateX(100%);
+      transition: all 500ms ease;
+      opacity: 0;
+      &--animate {
+        transform: translateX(117%);
+        opacity: 1;
+      }
     }
   }
 

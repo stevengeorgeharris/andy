@@ -8,12 +8,16 @@
     opacity: 1;
     animation: projects-load 1s ease-in-out;
   }
+
+  @media screen and (max-width: $mobile) {
+    padding: 0;
+  }
 }
 
 .projects__measure,
 .projects__card {
   width: 33.33333%;
-  
+
   @media screen and (max-width: $tablet) {
     width: 50%;
   }

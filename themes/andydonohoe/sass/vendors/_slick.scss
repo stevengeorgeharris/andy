@@ -125,6 +125,10 @@ $containerHeight: calc(100% - 140px);
 .project-slider-container {
   height: $containerHeight;
   width: 100%;
+  position: relative;
+  @media screen and (max-width: $mobile) {
+    padding: $spacing;
+  }
 }
 
 .project-slider {
@@ -133,27 +137,42 @@ $containerHeight: calc(100% - 140px);
   width: 100%;
   margin: 0;
   padding: 0;
+
+  opacity: 0;
+  transition: all 400ms ease-in-out;
+
+  &.slick-initialized {
+    opacity: 1;
+  }
 }
 
 .project-slider__slide {
   text-align: center;
 
   &:focus {
-      outline: none;
+    outline: none;
   }
 
   img {
     display: inline-block;
     max-height: 100%;
     max-width: 100%;
-  }
+    position: relative;
+
+    @media screen and (max-width: $mobile) {
+      top: 50%;
+      transform: translate3d(0, -50%, 0);
+    }
+   }
 }
 
 .project-slider__slide-text {
   position: relative;
   p {
     max-width: 600px;
-    padding: 0 2em;
+    width: 100%;
+    padding: 0 $spacing;
+    text-align: center;
     position: absolute;
     left: 50%;
     top: 50%;

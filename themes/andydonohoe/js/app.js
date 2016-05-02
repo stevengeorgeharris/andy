@@ -71,7 +71,8 @@ andy.slider = {
     if ($target.length > 0) {
       $target.slick({
         nextArrow: $('.project-slider__next'),
-        prevArrow: $('.project-slider__prev')
+        prevArrow: $('.project-slider__prev'),
+        cssEase: 'ease-in-out'
       });
     }
   }

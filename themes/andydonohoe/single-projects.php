@@ -17,7 +17,7 @@ $text = get_field('project_description');
   <div class="project-slider__button project-slider__prev"></div>
   <div class="project-slider__button project-slider__next"></div>
   <div class="project-slider">
-    
+
     <?php if ($text) : ?>
       <div class="project-slider__slide-text">
         <?php echo $text; ?>
@@ -26,7 +26,7 @@ $text = get_field('project_description');
 
     <?php foreach( $images as $image ): ?>
       <div class="project-slider__slide">
-        <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
       </div>
     <?php endforeach; ?>
 

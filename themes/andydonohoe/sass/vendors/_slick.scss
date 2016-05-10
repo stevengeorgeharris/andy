@@ -1,6 +1,6 @@
 /* Slider */
 
-$containerHeight: calc(100% - 140px);
+$containerHeight: calc(100% - 180px);
 
 .slick-slider {
     position: relative;
@@ -180,4 +180,26 @@ $containerHeight: calc(100% - 140px);
 
     font-size: em(24);
   }
+}
+
+.project-slider__info {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.project-slider__count,
+.project-slider__title {
+  display: inline-block;
+  font-size: em(20);
+  font-family: $font-light;
+  font-weight: normal;
+  margin: 0;
+  padding: em(20) em(5);
+}
+
+.project-slider__count span {
+  width: 20px;
+  display: inline-block;
 }

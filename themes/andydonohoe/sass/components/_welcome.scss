@@ -12,6 +12,9 @@
     opacity: 0;
     z-index: -1;
   }
+  &--alt-hidden {
+    display: none;
+  }
 }
 
 .welcome-branding {
@@ -54,25 +57,25 @@
     }
     &__main {
       font-family: $font-medium;
-      transform: translateX(50%);
+      transform: translate3d(50%,0,0);
       position: absolute;
       display: block;
-      transition: all 500ms ease;
+      transition: all 800ms ease;
       background-color: $color-secondary;
       z-index: 1;
       &--animate {
-        transform: translateX(0);
+        transform: translate3d(0,0,0);
       }
     }
     &__sub {
       font-family: $font-light;
       position: absolute;
       display: block;
-      transform: translateX(100%);
-      transition: all 500ms ease;
+      transform: translate3d(117%,0,0);
+      transition: all 800ms ease;
       opacity: 0;
       &--animate {
-        transform: translateX(117%);
+        transform: translate3d(117%,0,0);
         opacity: 1;
       }
     }

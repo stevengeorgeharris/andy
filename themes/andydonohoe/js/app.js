@@ -42,7 +42,7 @@ andy.welcome = {
     setTimeout(function () {
       $branding.addClass('welcome-branding--hidden');
       $welcome.addClass('welcome--hidden');
-    }, 2300);
+    }, 2600);
     setTimeout(function() {
       $projects.addClass('portfolio--loaded');
     }, 2800);
@@ -64,6 +64,15 @@ andy.grid = {
 andy.slider = {
   init: function() {
     this.attach();
+    this.setCount();
+  },
+  setCount: function() {
+    var $current = $('.project-slider__current');
+    var $total = $('.project-slider__total');
+    var count = $('.slick-slide').length;
+    var current = $('.project-slider').slick('slickCurrentSlide');
+    $current.text(current + 1);
+    $total.text(count - 2);
   },
   attach: function() {
     var $target = $('.project-slider');
@@ -72,7 +81,12 @@ andy.slider = {
       $target.slick({
         nextArrow: $('.project-slider__next'),
         prevArrow: $('.project-slider__prev'),
-        cssEase: 'ease-in-out'
+        cssEase: 'ease-in-out',
+        cssTransform: true,
+        swipe: true
+      });
+      $target.on('afterChange', function(event, slick, currentSlide, nextSlide){
+        andy.slider.setCount();
       });
     }
   }

@@ -17,7 +17,6 @@ $text = get_field('project_description');
   <div class="project-slider__button project-slider__prev"></div>
   <div class="project-slider__button project-slider__next"></div>
   <div class="project-slider">
-
     <?php if ($text) : ?>
       <div class="project-slider__slide-text">
         <?php echo $text; ?>
@@ -32,6 +31,14 @@ $text = get_field('project_description');
 
   </div>
   <?php endif; ?>
+</div>
+<div class="project-slider__info">
+  <h2 class="project-slider__title">
+    <?php the_title(); ?>
+  </h2>
+  <div class="project-slider__count">
+    <span class="project-slider__current"></span> / <span class="project-slider__total"></span>
+  </div>
 </div>
 
 <?php

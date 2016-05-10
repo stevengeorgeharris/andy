@@ -5,6 +5,7 @@
 
   $args = array(
     'post_type' => 'projects',
+    'orderby' => 'rand'
   );
   $query = new WP_Query($args);
 

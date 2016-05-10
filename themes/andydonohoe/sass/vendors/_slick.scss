@@ -1,6 +1,6 @@
 /* Slider */
 
-$containerHeight: calc(100% - 180px);
+$containerHeight: calc(100% - 109px);
 
 .slick-slider {
     position: relative;
@@ -126,6 +126,7 @@ $containerHeight: calc(100% - 180px);
   height: $containerHeight;
   width: 100%;
   position: relative;
+  padding-bottom: 80px;
   @media screen and (max-width: $mobile) {
     padding: $spacing;
   }
@@ -196,7 +197,7 @@ $containerHeight: calc(100% - 180px);
   font-family: $font-light;
   font-weight: normal;
   margin: 0;
-  padding: em(20) em(5);
+  padding: em(22) em(5);
 }
 
 .project-slider__count span {

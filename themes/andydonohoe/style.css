@@ -741,9 +741,10 @@ a {
   cursor: url("assets/img/slider-right.png"), auto; }
 
 .project-slider-container {
-  height: calc(100% - 180px);
+  height: calc(100% - 109px);
   width: 100%;
-  position: relative; }
+  position: relative;
+  padding-bottom: 80px; }
   @media screen and (max-width: 600px) {
     .project-slider-container {
       padding: 20px; } }
@@ -801,7 +802,7 @@ a {
   font-family: "calibre-light", sans-serif;
   font-weight: normal;
   margin: 0;
-  padding: 1.25em 0.3125em; }
+  padding: 1.375em 0.3125em; }
 
 .project-slider__count span {
   width: 20px;

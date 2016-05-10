@@ -30,15 +30,15 @@ $text = get_field('project_description');
     <?php endforeach; ?>
 
   </div>
-  <?php endif; ?>
-</div>
-<div class="project-slider__info">
-  <h2 class="project-slider__title">
-    <?php the_title(); ?>
-  </h2>
-  <div class="project-slider__count">
-    <span class="project-slider__current"></span> / <span class="project-slider__total"></span>
+  <div class="project-slider__info">
+    <h2 class="project-slider__title">
+      <?php the_title(); ?>
+    </h2>
+    <div class="project-slider__count">
+      <span class="project-slider__current"></span> / <span class="project-slider__total"></span>
+    </div>
   </div>
+  <?php endif; ?>
 </div>
 
 <?php

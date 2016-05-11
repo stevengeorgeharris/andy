@@ -32,6 +32,13 @@
 <?php wp_head(); ?>
 
 <body>
+  <?php
+    $maintenance = get_field('maintenance_mode', 'option');
+    $logged_in = is_user_logged_in();
+    if ($maintenance && ! $logged_in) :
+      get_template_part('template-parts/maintenance');
+    endif;
+  ?>
 
 <?php get_template_part('template-parts/brand', 'menu'); ?>
 <?php get_template_part('template-parts/menu', 'pop'); ?>

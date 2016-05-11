@@ -599,6 +599,89 @@ a {
     height: auto;
     padding-bottom: 0.3125em; }
 
+.maintenance {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #CFCFCF;
+  z-index: 5;
+  transition: all 200ms ease-in-out; }
+  .maintenance--hidden {
+    opacity: 0;
+    z-index: -1; }
+  .maintenance--alt-hidden {
+    display: none; }
+
+.maintenance-branding {
+  text-align: center;
+  font-size: 3em;
+  transition: all 200ms ease-in-out;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  .maintenance-branding__main {
+    font-family: "calibre-medium", sans-serif;
+    position: relative;
+    display: block; }
+  .maintenance-branding__sub {
+    font-family: "calibre-light", sans-serif;
+    position: relative;
+    display: block; }
+  @media screen and (max-width: 600px) {
+    .maintenance-branding {
+      font-size: 1.5em; }
+      .maintenance-branding .maintenance-branding__container {
+        top: 50%;
+        -webkit-transform: translate3d(0, -50%, 0);
+                transform: translate3d(0, -50%, 0);
+        position: relative; } }
+  @media screen and (min-width: 601px) {
+    .maintenance-branding .maintenance-branding__container {
+      width: 550px;
+      height: 42px;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      position: absolute; }
+    .maintenance-branding__main {
+      font-family: "calibre-medium", sans-serif;
+      -webkit-transform: translate3d(50%, 0, 0);
+              transform: translate3d(50%, 0, 0);
+      position: absolute;
+      display: block;
+      transition: all 800ms ease;
+      background-color: #CFCFCF;
+      z-index: 1; }
+      .maintenance-branding__main--animate {
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0); }
+    .maintenance-branding__sub {
+      font-family: "calibre-light", sans-serif;
+      position: absolute;
+      display: block;
+      -webkit-transform: translate3d(117%, 0, 0);
+              transform: translate3d(117%, 0, 0);
+      transition: all 800ms ease;
+      opacity: 0; }
+      .maintenance-branding__sub--animate {
+        -webkit-transform: translate3d(117%, 0, 0);
+                transform: translate3d(117%, 0, 0);
+        opacity: 1; }
+    .maintenance-branding__soon {
+      display: block;
+      font-size: 24px;
+      opacity: 0;
+      -webkit-transform: translate3d(0, 150px, 0);
+              transform: translate3d(0, 150px, 0);
+      transition: all 600ms ease-in-out; }
+      .maintenance-branding__soon--animate {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 70px, 0);
+                transform: translate3d(0, 70px, 0); } }
+
 .header {
   position: relative;
   padding: 40px;

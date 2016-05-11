@@ -30,10 +30,24 @@ andy.welcome = {
   },
   animations: function () {
     var $welcome = $('.welcome');
+    var $maintenance = $('.maintenance');
+    var $maintenanceBranding = $('.maintenance-branding__main');
+    var $maintenanceBrandingSub = $('.maintenance-branding__sub');
+    var $maintenanceBrandingSoon = $('.maintenance-branding__soon');
     var $branding = $('.welcome-branding');
     var $brandingSub = $('.welcome-branding__sub');
     var $brandingMain = $('.welcome-branding__main');
     var $projects = $('.portfolio');
+
+    if ($maintenance.length > 0) {
+      setTimeout(function () {
+        $maintenanceBranding.addClass('maintenance-branding__main--animate');
+        $maintenanceBrandingSub.addClass('maintenance-branding__sub--animate');
+      }, 1000);
+      setTimeout(function () {
+        $maintenanceBrandingSoon.addClass('maintenance-branding__soon--animate');
+      }, 1600);
+    }
 
     setTimeout(function () {
       $brandingSub.addClass('welcome-branding__sub--animate');

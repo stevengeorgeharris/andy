@@ -65,6 +65,13 @@ andy.slider = {
   init: function() {
     this.attach();
     this.setCount();
+    if (Modernizr.touchevents) {
+      this.touch();
+    }
+  },
+  touch: function() {
+    $('.project-slider__next').hide();
+    $('.project-slider__prev').hide();
   },
   setCount: function() {
     var $current = $('.project-slider__current');

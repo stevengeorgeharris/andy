@@ -1,8 +1,7 @@
 .header {
   @extend %clearfix;
+  position: relative;
   padding: $spacing * 2;
-  position: fixed;
-  width: 100%;
   z-index: 3;
 
   @media screen and (max-width: $mobile) {
@@ -11,9 +10,9 @@
 }
 
 .header__brand {
-  float: left;
   font-size: em(24);
   width: 50%;
+  float: left;
 }
 
 .brand-main {

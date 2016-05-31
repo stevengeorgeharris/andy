@@ -2,27 +2,6 @@
 
 $containerHeight: calc(100% - 109px);
 
-.project {
-  background: #fff;
-  height: 100%;
-  opacity: 0;
-  padding-top: 109px;
-  position: fixed;
-  top: 0;
-  transition: all 400ms ease-in-out;
-  width: 100%;
-
-  .project-slider-container {
-    height: 100%;
-  }
-
-  &--active {
-    opacity: 1;
-    width: 100%;
-    z-index: 2;
-  }
-}
-
 .slick-slider {
     position: relative;
     display: block;

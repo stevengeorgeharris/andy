@@ -9,14 +9,7 @@ andy.menuPop = {
     var $button = $('.header__menu-button');
     var $menu = $('.menu-pop');
     $button.on('click', function () {
-      if ($(this).hasClass('header__menu-button--project')) {
-        $(this).removeClass('header__menu-button--close');
-        $(this).removeClass('header__menu-button--project');
-        $(this).addClass('header__menu-button--pop');
-        $('.project-slider-container').remove();
-        $('.project').removeClass('project--active');
-        $('body').css('overflow', 'scroll');
-      } else if (! $menu.hasClass('menu-pop--show') ) {
+      if (! $menu.hasClass('menu-pop--show') ) {
         $(this).removeClass('header__menu-button--pop');
         $(this).addClass('header__menu-button--close');
         $menu.removeClass('menu-pop--hidden');
@@ -82,38 +75,6 @@ andy.grid = {
   }
 };
 
-andy.getPost = {
-  init: function() {
-    this.attach();
-  },
-  attach: function() {
-    $('.projects__card a').on('click', function(e) {
-      e.preventDefault();
-
-      var postId = $(this).data('id');
-      var title = $(this).data('title');
-      var titleNoSpace = title.split(' ').join('-').toLowerCase();
-
-      $.ajax({
-    		url: app.ajaxurl,
-    		type: 'post',
-    		data: {
-    			action: 'ajax_post',
-          post_id: postId
-    		},
-    		success: function(result) {
-    			$('.project').append(result);
-          andy.slider.init();
-          $('.project').addClass('project--active');
-          $('body').css('overflow', 'hidden');
-          $('.header__menu-button').removeClass('header__menu-button--pop');
-          $('.header__menu-button').addClass('header__menu-button--close header__menu-button--project');
-    		}
-    	});
-    });
-  }
-}
-
 andy.slider = {
   init: function() {
     this.attach();
@@ -130,14 +91,9 @@ andy.slider = {
     var $current = $('.project-slider__current');
     var $total = $('.project-slider__total');
     var count = $('.slick-slide').length;
-    console.log(count);
     var current = $('.project-slider').slick('slickCurrentSlide');
     $current.text(current + 1);
-    if (count === 1) {
-      $total.text(count);
-    } else {
-      $total.text(count - 2);
-    }
+    $total.text(count - 2);
   },
   attach: function() {
     var $target = $('.project-slider');
@@ -162,7 +118,6 @@ andy.initialise = function() {
   andy.welcome.init();
   andy.grid.init();
   andy.slider.init();
-  andy.getPost.init();
 };
 
 window.onload = andy.initialise;

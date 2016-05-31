@@ -1,6 +1,6 @@
 .portfolio {
+  padding: 0 em(20);
   opacity: 0;
-  padding: em(109) em(20);
   transform: translate3d(0, 50%, 0);
 
   &--loaded {

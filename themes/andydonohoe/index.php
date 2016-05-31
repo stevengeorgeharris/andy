@@ -1,5 +1,11 @@
 <?php
-get_header(); 
+  get_header();
+?>
 
-get_footer();
+<div class="portfolio">
+  <?php get_template_part('template-parts/projects'); ?>
+</div>
+
+<?php
+  get_footer();
 ?>

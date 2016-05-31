@@ -8,12 +8,17 @@ andy.menuPop = {
   attach: function () {
     var $button = $('.header__menu-button');
     var $menu = $('.menu-pop');
+    var rootUrl = window.location;
+
     $button.on('click', function () {
       if ($(this).hasClass('header__menu-button--project')) {
         $(this).removeClass('header__menu-button--close');
         $(this).removeClass('header__menu-button--project');
         $(this).addClass('header__menu-button--pop');
         $('.project-slider-container').remove();
+        if (history) {
+          history.pushState(null, null, rootUrl.origin);
+        }
         $('.project').removeClass('project--active');
         $('body').css('overflow', 'scroll');
       } else if (! $menu.hasClass('menu-pop--show') ) {
@@ -106,6 +111,9 @@ andy.getPost = {
           andy.slider.init();
           $('.project').addClass('project--active');
           $('body').css('overflow', 'hidden');
+          if (history) {
+            history.pushState(null, null, 'projects/' + titleNoSpace);
+          }
           $('.header__menu-button').removeClass('header__menu-button--pop');
           $('.header__menu-button').addClass('header__menu-button--close header__menu-button--project');
     		}

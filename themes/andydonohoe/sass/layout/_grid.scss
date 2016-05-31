@@ -10,13 +10,13 @@
   }
 
   @media screen and (max-width: $mobile) {
-    padding: 0;
+    padding: em(109) 0 0;
   }
 }
 
 .projects__measure,
 .projects__card {
-  width: 33.33333%;
+  width: 25%;
 
   @media screen and (max-width: $tablet) {
     width: 50%;

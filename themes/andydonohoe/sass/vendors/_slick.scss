@@ -2,6 +2,11 @@
 
 $containerHeight: calc(100% - 109px);
 
+.project-single {
+  height: 100%;
+  padding-top: 109px;
+}
+
 .project {
   background: #fff;
   height: 100%;
@@ -11,10 +16,6 @@ $containerHeight: calc(100% - 109px);
   top: 0;
   transition: all 400ms ease-in-out;
   width: 100%;
-
-  .project-slider-container {
-    height: 100%;
-  }
 
   &--active {
     opacity: 1;
@@ -144,13 +145,10 @@ $containerHeight: calc(100% - 109px);
 }
 
 .project-slider-container {
-  height: $containerHeight;
+  height: 100%;
   width: 100%;
   position: relative;
-  padding-bottom: 80px;
-  @media screen and (max-width: $mobile) {
-    padding: $spacing;
-  }
+  padding-bottom: em(80);
 }
 
 .project-slider {
@@ -180,6 +178,7 @@ $containerHeight: calc(100% - 109px);
     max-height: 100%;
     max-width: 100%;
     position: relative;
+    padding: 0 em(20);
 
     @media screen and (max-width: $mobile) {
       top: 50%;
@@ -193,7 +192,7 @@ $containerHeight: calc(100% - 109px);
   p {
     max-width: 600px;
     width: 100%;
-    padding: 0 $spacing;
+    padding: 0 em(15);
     text-align: center;
     position: absolute;
     left: 50%;
